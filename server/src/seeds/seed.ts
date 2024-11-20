@@ -4,11 +4,16 @@ import cleanDB from "./cleanDb.js";
 
 import pythonQuestions from './pythonQuestions.json' assert { type: "json" };
 
-db.once('open', async () => {
-  await cleanDB('Question', 'questions');
+try {
+  await db();
+  await cleanDB();
 
+  //bulk create each model
   await Question.insertMany(pythonQuestions);
 
-  console.log('Questions seeded!');
+  console.log('Sedding completed successfully');
   process.exit(0);
-});
+} catch (error) {
+  console.error('Error seeding database: ', error);
+  process.exit(1);
+}
