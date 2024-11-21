@@ -19,6 +19,7 @@ jobs:
           npm run test-component
 
 # need to add server start? build?
+#adding another small change
 
       - name: Deploy
         # Only run this step if the branch is main
