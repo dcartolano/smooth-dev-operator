@@ -18,6 +18,8 @@ jobs:
           npm install
           npm run test-component
 
+# need to add server start? build?
+
       - name: Deploy
         # Only run this step if the branch is main
         if: github.ref == 'refs/heads/main'
