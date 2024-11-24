@@ -44,6 +44,7 @@ Use the following instructions for setting up the branch protection rules, which
 
   **Note**: The actions will not show up in the search unless they have run successfully at least once. The names we are searching for come from the value provided to the name key under the jobs key in the YAML files. The names are case-sensitive.
 
+After this point, go back and check your merges, and all the tests should have passed during the merge and automatically triggered Render to re-deploy with the approved changes.
 
 ## Credits
 
